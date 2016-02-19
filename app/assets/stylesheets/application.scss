@@ -1,0 +1,25 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+h1 {
+	text-align: center;
+	font-size: 55px;
+	color: red;
+}
+
+#index-title {
+   text-align: center;
+   font-size: 22px;
+   color: blue;
+}
+
+#index-note {
+	text-align: center;
+  font-size: 13px;
+  color: blue;
+}
+
+#hock {
+  text-align: center;
+  font-size: 23px;
+  color: blue;
+}
