@@ -6,6 +6,43 @@ h1.roccit {
 	color: red;
 }
 
+ul.nav {
+	border-radius: 15px;
+	margin: 20px auto;
+	width: 980px;
+}
+
+ul.nav li {
+	border: solid 2px #09a6ff;
+	border-radius: 10px;
+	background-color: rgb(226, 221, 223);
+}
+
+ul.nav a {
+	text-align: center;width: 121px;
+	font-size: 15px;
+	color: #1b9abb;
+	font-family: "Myriad Pro", Helvetica, sans-serif;
+}
+
+ul.nav a:hover {
+	color: #1b9abb;
+	text-decoration: underline;
+	background-color: rgb(195, 186, 186);
+	border-radius: 10px;
+}
+
+ul.nav .nav-left {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+ul.nav .nav-left a:hover {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+
 #about {
 	text-align: center;
 	font-size: 35px;
