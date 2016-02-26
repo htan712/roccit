@@ -1,63 +1,104 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+hr {
+	border: none;
+	height: 1px;
+	color: #333;
+	background-color: #333;
+}
+
 h1.roccit {
 	text-align: center;
 	font-size: 55px;
 	color: red;
 }
 
+.nav {
+	margin-top: 5px;
+}
+
 ul.nav {
 	border-radius: 15px;
 	margin: 20px auto;
-	width: 980px;
+	width: 900px;
 }
 
-ul.nav li {
+ul.nav #navi {
 	border: solid 2px #09a6ff;
-	border-radius: 10px;
-	background-color: rgb(244, 240, 241);
+	border-radius: 20px;
+	background-color: #bab8b9;
 }
 
-ul.nav a {
+ul.nav #navi a {
 	text-align: center;width: 121px;
 	font-size: 15px;
-	color: #1b9abb;
+	color: #ffffff;
 	font-family: "Myriad Pro", Helvetica, sans-serif;
 }
 
-ul.nav a:hover {
+ul.nav #navi a:hover {
 	color: #1b9abb;
 	text-decoration: underline;
 	background-color: rgb(226, 222, 222);
-	border-radius: 10px;
-}
-
-ul.nav .nav-left {
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
-}
-
-ul.nav .nav-left a:hover {
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
+	border-radius: 20px;
 }
 
 .jumbotron p {
 	text-align: center;
 }
 
-.user-info {
+// .user-info {
+// 	border: solid 2px #09a6ff;
+// 	border-radius: 10px;
+// 	color: #1b9abb;
+// 	background-color: rgb(244, 240, 241);
+// 	margin-top: 9px;
+// }
+
+
+ul.nav #session {
+	background-color: #28e4ce;
+	color: #ffffff;
+	float: right;
 	border: solid 2px #09a6ff;
-	border-radius: 10px;
+	border-radius: 20px;
+	width: 100px;
+	text-align: center;
+}
+
+ul.nav #session a {
+	color: #1e26d7;
+}
+
+ul.nav #session a:hover {
+	border-radius: 20px;
+	color: #040fff;
+	background-color: #14f0f0;
+
+}
+
+ul.nav #username #sign-out {
+	margin: 20px auto;
+}
+
+ul.nav #sign-out {
+	border: solid 2px #09a6ff;
+	border-radius: 20px;
+	background-color: #bab8b9;
+	float: right;
+}
+
+ul.nav #sign-out a {
+	color: rgb(255, 255, 255);
+}
+
+ul.nav #sign-out a:hover {
 	color: #1b9abb;
-	background-color: rgb(244, 240, 241);
-	margin-top: 9px;
+	text-decoration: underline;
+	background-color: rgb(226, 222, 222);
+	border-radius: 20px;
 }
-
-.nav {
-	margin-top: 5px;
-}
-
 #about {
 	text-align: center;
 	font-size: 35px;

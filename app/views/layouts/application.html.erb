@@ -10,15 +10,19 @@
 <body>
   <div class="container">
   	<ul class="nav nav-pills">
-  		<li class="nav-left"><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Topics", topics_path %></li>
-  		<li><%= link_to "About", about_path %></li>
-
-      <div class = "pull-right user-info">
-        <%= link_to "Sign Up", new_user_path %>
-      </div>
+  		<li id="navi"><%= link_to "Home", root_path %></li>
+      <li id="navi"><%= link_to "Topics", topics_path %></li>
+  		<li id="navi"><%= link_to "About", about_path %></li>
+        <% if current_user %>
+           <li id="sign-out"> <%= link_to "Sign Out", session_path(current_user), method: :delete %> </li>
+           <li id="sign-out"> <%= current_user.name %> </li>
+         <% else %>
+           <li id="session"> <%= link_to "Sign Up", new_user_path %> </li>
+           <li id="session"> <%= link_to "Sign In", new_session_path %> </li>
+         <% end %>
   	</ul>
-
+    <hr>
+  <div class="flash">
     <% if flash[:notice] %>
       <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -35,9 +39,8 @@
         <%= flash[:alert] %>
       </div>
     <% end %>
-
+  </div>
     <%= yield %>
   </div>
-
 </body>
 </html>
