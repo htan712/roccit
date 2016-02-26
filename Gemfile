@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'faker'
+gem 'bcrypt'
 
 group :production do
   gem 'pg'

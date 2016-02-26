@@ -15,7 +15,7 @@ ul.nav {
 ul.nav li {
 	border: solid 2px #09a6ff;
 	border-radius: 10px;
-	background-color: rgb(226, 221, 223);
+	background-color: rgb(244, 240, 241);
 }
 
 ul.nav a {
@@ -28,7 +28,7 @@ ul.nav a {
 ul.nav a:hover {
 	color: #1b9abb;
 	text-decoration: underline;
-	background-color: rgb(195, 186, 186);
+	background-color: rgb(226, 222, 222);
 	border-radius: 10px;
 }
 
@@ -42,6 +42,21 @@ ul.nav .nav-left a:hover {
 	border-bottom-left-radius: 15px;
 }
 
+.jumbotron p {
+	text-align: center;
+}
+
+.user-info {
+	border: solid 2px #09a6ff;
+	border-radius: 10px;
+	color: #1b9abb;
+	background-color: rgb(244, 240, 241);
+	margin-top: 9px;
+}
+
+.nav {
+	margin-top: 5px;
+}
 
 #about {
 	text-align: center;
