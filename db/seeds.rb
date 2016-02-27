@@ -1,5 +1,14 @@
 require "random_data"
 
+5.times do
+  User.create!(
+    name: Faker::Internet.user_name,
+    email: Faker::Internet.safe_email,
+    password: "password"
+  )
+end
+users = User.all
+
 15.times do
   Topic.create!(
     name:         Faker::Hipster.sentence,
@@ -11,6 +20,7 @@ topics = Topic.all
 
 50.times do
   Post.create!(
+    user: users.sample,
     topic: topics.sample,
     title:  Faker::Hipster.sentence,
     body:   Faker::Hipster.paragraph(2)
@@ -26,7 +36,14 @@ posts = Post.all
   )
 end
 
+user = User.first
+user.update_attributes!(
+  email: 'jtan712@bloc.com',
+  password: 'helloworld'
+)
+
 puts "Seed finished"
+puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
