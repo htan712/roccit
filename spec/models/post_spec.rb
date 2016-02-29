@@ -6,6 +6,9 @@ RSpec.describe Post, type: :model do
 
   let(:post) { topic.posts.create!(title: Faker::Hipster.sentence, body: Faker::Hipster.paragraph, user: user) }
 
+  it { is_expected.to have_many(:labelings) }
+  it { is_expected.to have_many(:labels).through(:labelings) }
+
   it { is_expected.to belong_to(:topic) }
   it { is_expected.to belong_to(:user) }
 
