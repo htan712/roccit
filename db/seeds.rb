@@ -7,7 +7,7 @@ topics = Topic.all
 
 admin = User.create!(
   name: 'Hockster',
-  email: 'jtan712@bloc.com',
+  email: 'hock.tan712@gmail.com',
   password: 'helloworld',
   role: 'admin'
 )
