@@ -1,44 +1,9 @@
 require "random_data"
 
-5.times do
-  User.create!(
-    name: Faker::Internet.user_name,
-    email: Faker::Internet.safe_email,
-    password: "password"
-  )
-end
-users = User.all
-
-15.times do
-  Topic.create!(
-    name:         Faker::Hipster.sentence,
-    description:  Faker::Hipster.paragraph
-  )
-end
+rave = Topic.create!(name:  "Upcoming Rave Events", description:  "Share upcoming rave events and tickets with fellow ravers.")
+fitness = Topic.create!(name:  "Health and Workout Tips", description:  "Share and help improve others active lifestyles.")
+coooking = Topic.create!(name:  "Cooking recipes, homemade", description:  "Share your tricks&tips on delicious food.")
 topics = Topic.all
-
-
-50.times do
-  post = Post.create!(
-    user: users.sample,
-    topic: topics.sample,
-    title:  Faker::Hipster.sentence,
-    body:   Faker::Hipster.paragraph(2)
-  )
-  post.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
-  rand(1..5).times { post.votes.create!(value: [-1, 1].sample, user: users.sample) }
-end
-
-posts = Post.all
-
-
-100.times do
-  Comment.create!(
-    user: users.sample,
-    post: posts.sample,
-    body: Faker::Hipster.paragraph(2)
-  )
-end
 
 admin = User.create!(
   name: 'Hockster',
