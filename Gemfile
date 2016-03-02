@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'faker'
 gem 'bcrypt'
+gem 'figaro'
 
 group :production do
   gem 'pg'

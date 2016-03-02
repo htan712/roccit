@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
   before_action :require_sign_in
+  
   def up_vote
     update_vote(1)
     redirect_to :back

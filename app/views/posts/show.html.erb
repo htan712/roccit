@@ -1,11 +1,12 @@
 <div>
-   <%= render partial: 'votes/voter', locals: { post: @post } %>
-   <h1>
-     <%= @post.title %> <br>
+   <h2>
+     <%= @post.title %>
+     <%= render partial: 'votes/voter', locals: { post: @post } %>
+      <br>
      <small>
        submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %>
      </small>
-   </h1>
+   </h2>
  </div>
 <div class="row">
     <div class="col-md-8">
@@ -43,4 +44,7 @@
          </small>
        </div>
      </h3>
+     <% if current_user %>
+      <%= render partial: 'favorites/favorite', locals: { post: @post } %>
+    <% end %>
 </div>
