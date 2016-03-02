@@ -15,7 +15,13 @@ admin = User.create!(
 member = User.create!(
   name: 'Natalee',
   email: 'jtan712@gmail.com',
-  password: 'password',
+  password: 'password'
+)
+
+member = User.create!(
+  name: 'Cory',
+  email: 'vegettass2@gmail.com',
+  password: 'password'
 )
 
 puts "Seed finished"

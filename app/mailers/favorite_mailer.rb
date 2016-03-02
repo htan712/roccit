@@ -1,4 +1,5 @@
 class FavoriteMailer < ApplicationMailer
+  include SendGrid
   default from: 'jtan712@gmail.com'
 
   def new_comment(user, post, comment)
