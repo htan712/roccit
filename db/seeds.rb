@@ -1,8 +1,9 @@
 require "random_data"
 
-rave = Topic.create!(name:  "Upcoming Rave Events", description:  "Share upcoming rave events and tickets with fellow ravers.")
 fitness = Topic.create!(name:  "Health and Workout Tips", description:  "Share and help improve others active lifestyles.")
 coooking = Topic.create!(name:  "Cooking recipes, homemade", description:  "Share your tricks&tips on delicious food.")
+rave = Topic.create!(name:  "Upcoming Rave Events", description:  "Share upcoming rave events and tickets with fellow ravers.")
+
 topics = Topic.all
 
 admin = User.create!(
